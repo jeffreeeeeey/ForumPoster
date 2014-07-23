@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		046DF09E197F2A59009C076E /* TopicModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 046DF09C197F2A59009C076E /* TopicModel.xcdatamodeld */; };
+		046DF0A2197F2ED5009C076E /* Entity.m in Sources */ = {isa = PBXBuildFile; fileRef = 046DF0A1197F2ED5009C076E /* Entity.m */; };
 		048C771519789F9C00B82289 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 048C771419789F9C00B82289 /* main.m */; };
 		048C771819789F9C00B82289 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 048C771719789F9C00B82289 /* AppDelegate.m */; };
 		048C771B19789F9C00B82289 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 048C771A19789F9C00B82289 /* ViewController.m */; };
@@ -31,6 +33,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		046DF09D197F2A59009C076E /* TopicModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TopicModel.xcdatamodel; sourceTree = "<group>"; };
+		046DF09F197F2ED5009C076E /* ForumPosterObjC3-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ForumPosterObjC3-Bridging-Header.h"; sourceTree = "<group>"; };
+		046DF0A0197F2ED5009C076E /* Entity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Entity.h; sourceTree = "<group>"; };
+		046DF0A1197F2ED5009C076E /* Entity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Entity.m; sourceTree = "<group>"; };
 		048C770F19789F9C00B82289 /* ForumPosterObjC3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ForumPosterObjC3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		048C771319789F9C00B82289 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		048C771419789F9C00B82289 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -161,6 +167,10 @@
 			children = (
 				04CA2BDD197BBDE1005116B8 /* topicDetailView.h */,
 				04CA2BDE197BBDE1005116B8 /* topicDetailView.m */,
+				046DF09C197F2A59009C076E /* TopicModel.xcdatamodeld */,
+				046DF0A0197F2ED5009C076E /* Entity.h */,
+				046DF0A1197F2ED5009C076E /* Entity.m */,
+				046DF09F197F2ED5009C076E /* ForumPosterObjC3-Bridging-Header.h */,
 			);
 			name = CustomClasses;
 			sourceTree = "<group>";
@@ -264,6 +274,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				046DF0A2197F2ED5009C076E /* Entity.m in Sources */,
+				046DF09E197F2A59009C076E /* TopicModel.xcdatamodeld in Sources */,
 				048C771B19789F9C00B82289 /* ViewController.m in Sources */,
 				04CA2BDF197BBDE1005116B8 /* topicDetailView.m in Sources */,
 				048C77391978A0B300B82289 /* AddNewPostViewController.m in Sources */,
@@ -386,9 +398,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = ForumPosterObjC3/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ForumPosterObjC3/ForumPosterObjC3-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -397,9 +412,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = ForumPosterObjC3/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ForumPosterObjC3/ForumPosterObjC3-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -470,6 +487,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		046DF09C197F2A59009C076E /* TopicModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				046DF09D197F2A59009C076E /* TopicModel.xcdatamodel */,
+			);
+			currentVersion = 046DF09D197F2A59009C076E /* TopicModel.xcdatamodel */;
+			path = TopicModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 048C770719789F9C00B82289 /* Project object */;
 }
