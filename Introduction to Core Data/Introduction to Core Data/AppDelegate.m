@@ -19,27 +19,69 @@
 @synthesize managedObjectModel = _managedObjectModel;
 @synthesize persistentStoreCoordinator = _persistentStoreCoordinator;
 
+- (BOOL)createNewPersonWithFirstName:(NSString *)paramFirstName lastName:(NSString *)paramLastName age:(NSNumber *)paramAge
+{
+    BOOL result = NO;
+    
+    if ([paramFirstName length] == 0 || [paramLastName length] == 0) {
+        NSLog(@"First and last names are mandatory");
+        return NO;
+    }
+    
+    Person *newPerson = [NSEntityDescription insertNewObjectForEntityForName:@"Person" inManagedObjectContext:self.managedObjectContext];
+    if (newPerson == nil) {
+        NSLog(@"Fail to create the new person");
+        return NO;
+    }
+    
+    newPerson.firstName = paramFirstName;
+    newPerson.lastName = paramLastName;
+    newPerson.age = paramAge;
+    
+    NSError *savingError = nil;
+    
+    if ([self.managedObjectContext save:&savingError]) {
+        return YES;
+    }else {
+        NSLog(@"Failed to save the new person, Error = %@", savingError);
+    }
+    
+    return result;
+}
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
-    Person *newPerson = [NSEntityDescription insertNewObjectForEntityForName:@"Person" inManagedObjectContext:self.managedObjectContext];
+    [self createNewPersonWithFirstName:@"Anthony" lastName:@"Robbins" age:[NSNumber numberWithInt:18]];
+    [self createNewPersonWithFirstName:@"Richard" lastName:@"Branson" age:[NSNumber numberWithInt:21]];
     
-    if (newPerson != nil) {
-        newPerson.firstName = @"Andi";
-        newPerson.lastName = @"Robbins";
-        newPerson.age = @51;
-        
-        NSError *savingError = nil;
-        
-        if ([self.managedObjectContext save:&savingError]) {
-            NSLog(@"Successfully saved the context.");
-        } else {
-            NSLog(@"Failed to save the contex. Error = %@", savingError);
+    //Tell the request that we want to read the contents of the Person entity
+    //Create the fetch request first
+    
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc]initWithEntityName:@"Person"];
+    NSError *requestError = nil;
+    
+    // And execute the fetch request on the context
+    
+    NSArray *persons = [self.managedObjectContext executeFetchRequest:fetchRequest error:&requestError];
+    
+    if ([persons count] > 0) {
+        NSUInteger counter = 1;
+        for (Person *thisPerson in persons) {
+            NSLog(@"Person %lu FirstName: = %@", (unsigned long)counter, thisPerson.firstName);
+            NSLog(@"Person %lu LastName: = %@", (unsigned long)counter, thisPerson.lastName);
+            NSLog(@"Person %lu Age = %ld", (unsigned long)counter, (unsigned long)[thisPerson.age unsignedIntegerValue]);
             
+            counter++;
         }
-    } else {
-        NSLog(@"Failed to create the new person.");
+    }else {
+        NSLog(@"Could not find any Person entities in the context");
     }
+    
+    self.window = [[UIWindow alloc]initWithFrame:[[UIScreen mainScreen]bounds]];
+    
+    self.window.backgroundColor = [UIColor whiteColor];
+    [self.window makeKeyAndVisible];
     
     return YES;
 }
