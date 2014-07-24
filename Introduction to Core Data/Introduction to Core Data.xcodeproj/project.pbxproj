@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		045C8B681980B1A500F96D47 /* PersonsListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 045C8B671980B1A500F96D47 /* PersonsListTableViewController.m */; };
+		045C8B6B1980B1DB00F96D47 /* AddPersonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 045C8B6A1980B1DB00F96D47 /* AddPersonViewController.m */; };
 		04EDCBF5197F726F000D6AFD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EDCBF4197F726F000D6AFD /* main.m */; };
 		04EDCBF8197F726F000D6AFD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EDCBF7197F726F000D6AFD /* AppDelegate.m */; };
 		04EDCBFB197F726F000D6AFD /* Introduction_to_Core_Data.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 04EDCBF9197F726F000D6AFD /* Introduction_to_Core_Data.xcdatamodeld */; };
@@ -28,6 +30,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		045C8B661980B1A500F96D47 /* PersonsListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonsListTableViewController.h; sourceTree = "<group>"; };
+		045C8B671980B1A500F96D47 /* PersonsListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonsListTableViewController.m; sourceTree = "<group>"; };
+		045C8B691980B1DB00F96D47 /* AddPersonViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddPersonViewController.h; sourceTree = "<group>"; };
+		045C8B6A1980B1DB00F96D47 /* AddPersonViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddPersonViewController.m; sourceTree = "<group>"; };
 		04EDCBEF197F726F000D6AFD /* Introduction to Core Data.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Introduction to Core Data.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		04EDCBF3197F726F000D6AFD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		04EDCBF4197F726F000D6AFD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -90,6 +96,10 @@
 				04EDCBFC197F726F000D6AFD /* ViewController.h */,
 				04EDCBFD197F726F000D6AFD /* ViewController.m */,
 				04EDCBFF197F726F000D6AFD /* Main.storyboard */,
+				045C8B661980B1A500F96D47 /* PersonsListTableViewController.h */,
+				045C8B671980B1A500F96D47 /* PersonsListTableViewController.m */,
+				045C8B691980B1DB00F96D47 /* AddPersonViewController.h */,
+				045C8B6A1980B1DB00F96D47 /* AddPersonViewController.m */,
 				04EDCC02197F726F000D6AFD /* Images.xcassets */,
 				04EDCBF9197F726F000D6AFD /* Introduction_to_Core_Data.xcdatamodeld */,
 				04EDCC19197F74F1000D6AFD /* Person.h */,
@@ -225,6 +235,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				045C8B6B1980B1DB00F96D47 /* AddPersonViewController.m in Sources */,
+				045C8B681980B1A500F96D47 /* PersonsListTableViewController.m in Sources */,
 				04EDCBF8197F726F000D6AFD /* AppDelegate.m in Sources */,
 				04EDCBFB197F726F000D6AFD /* Introduction_to_Core_Data.xcdatamodeld in Sources */,
 				04EDCC1B197F74F1000D6AFD /* Person.m in Sources */,
@@ -421,6 +433,7 @@
 				04EDCC14197F7270000D6AFD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		04EDCC15197F7270000D6AFD /* Build configuration list for PBXNativeTarget "Introduction to Core DataTests" */ = {
 			isa = XCConfigurationList;
@@ -429,6 +442,7 @@
 				04EDCC17197F7270000D6AFD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

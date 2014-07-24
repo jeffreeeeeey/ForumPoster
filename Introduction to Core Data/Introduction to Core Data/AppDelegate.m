@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "Person.h"
+#import "PersonsListTableViewController.h"
 
 @interface AppDelegate ()
 
@@ -51,14 +52,20 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    /*
+    [self createNewPersonWithFirstName:@"Tony" lastName:@"Blar" age:[NSNumber numberWithInt:78]];
+    [self createNewPersonWithFirstName:@"Machol" lastName:@"Zhang" age:[NSNumber numberWithInt:5]];
     
-    [self createNewPersonWithFirstName:@"Anthony" lastName:@"Robbins" age:[NSNumber numberWithInt:18]];
-    [self createNewPersonWithFirstName:@"Richard" lastName:@"Branson" age:[NSNumber numberWithInt:21]];
     
     //Tell the request that we want to read the contents of the Person entity
     //Create the fetch request first
     
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc]initWithEntityName:@"Person"];
+    
+    NSSortDescriptor *ageSort = [[NSSortDescriptor alloc]initWithKey:@"age" ascending:YES];
+    NSSortDescriptor *firstNameSort = [[NSSortDescriptor alloc]initWithKey:@"firstName" ascending:YES];
+    fetchRequest.sortDescriptors = @[firstNameSort, ageSort];
+    
     NSError *requestError = nil;
     
     // And execute the fetch request on the context
@@ -70,19 +77,42 @@
         for (Person *thisPerson in persons) {
             NSLog(@"Person %lu FirstName: = %@", (unsigned long)counter, thisPerson.firstName);
             NSLog(@"Person %lu LastName: = %@", (unsigned long)counter, thisPerson.lastName);
-            NSLog(@"Person %lu Age = %ld", (unsigned long)counter, (unsigned long)[thisPerson.age unsignedIntegerValue]);
+            NSLog(@"Person %lu Age = %ld \n ================", (unsigned long)counter, (unsigned long)[thisPerson.age unsignedIntegerValue]);
             
             counter++;
         }
     }else {
         NSLog(@"Could not find any Person entities in the context");
     }
+    /*
+    if ([persons count] > 0) {
+        Person *lastPerson = [persons lastObject];
+        [self.managedObjectContext deleteObject:lastPerson];
+        
+        if ([lastPerson isDeleted]) {
+            NSLog(@"Successfully deleted the last person in the array");
+        }
+        
+        NSError *savingError = nil;
+        if ([self.managedObjectContext save:&savingError]) {
+            NSLog(@"Successfully saved the context");
+        } else {
+            NSLog(@"Failed to delete the last person in the array");
+        }
+    } else {
+        NSLog(@"Could not find any Person entities in the context");
+    }
+    
+    NSLog(@"There are %lu person now.", (unsigned long)[persons count]);
+    
     
     self.window = [[UIWindow alloc]initWithFrame:[[UIScreen mainScreen]bounds]];
+    PersonsListTableViewController *vc = [[PersonsListTableViewController alloc]init];
+    self.window.rootViewController = vc;
     
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
-    
+    */
     return YES;
 }
 
