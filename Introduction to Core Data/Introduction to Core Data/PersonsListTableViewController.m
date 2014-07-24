@@ -109,6 +109,8 @@ static NSString *PersonTableViewCell = @"PersonTableViewCell";
     Person *person = [self.frc objectAtIndexPath:indexPath];
     cell.textLabel.text = [person.firstName stringByAppendingFormat:@" %@", person.lastName];
     cell.detailTextLabel.text = [NSString stringWithFormat:@"Age:%lu", (unsigned long)[person.age unsignedIntegerValue]];
+    NSLog(@"%@",[NSString stringWithFormat:@"Age:%lu", (unsigned long)[person.age unsignedIntegerValue]]);
+    NSLog(@"cell.detailText:%@", cell.detailTextLabel.text);
     
     return cell;
 }

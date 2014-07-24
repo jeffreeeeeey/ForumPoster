@@ -53,15 +53,14 @@
         
         NSError *savingError = nil;
         if ([managedObjectContext save:&savingError]) {
-            NSLog(@"saving");
             [self.navigationController popViewControllerAnimated:YES];
+            [self.presentingViewController dismissViewControllerAnimated:YES completion:nil];
         } else {
             NSLog(@"Failed to save the managed object context");
         }
     } else {
         NSLog(@"Failed to create the new person object");
     }
-
     
 }
 
