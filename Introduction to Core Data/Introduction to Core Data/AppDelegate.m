@@ -20,6 +20,7 @@
 @synthesize managedObjectModel = _managedObjectModel;
 @synthesize persistentStoreCoordinator = _persistentStoreCoordinator;
 
+/*
 - (BOOL)createNewPersonWithFirstName:(NSString *)paramFirstName lastName:(NSString *)paramLastName age:(NSNumber *)paramAge
 {
     BOOL result = NO;
@@ -49,6 +50,7 @@
     
     return result;
 }
+ */
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.

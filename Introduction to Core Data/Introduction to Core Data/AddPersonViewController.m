@@ -14,6 +14,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *textFieldFirstName;
 @property (weak, nonatomic) IBOutlet UITextField *textFieldLastName;
 @property (weak, nonatomic) IBOutlet UITextField *textFieldAge;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *saveButton;
 
 @end
 
@@ -24,12 +25,22 @@
     // Do any additional setup after loading the view.
 }
 
+- (void)viewDidAppear:(BOOL)animated
+{
+    [self.textFieldFirstName becomeFirstResponder];
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
-- (void)createNewPerson {
+- (void)createNewPerson:(id)paramSender {
+    }
+- (IBAction)cancelButtonPressed:(id)sender {
+    [self.presentingViewController dismissViewControllerAnimated:YES completion:nil];
+}
+- (IBAction)saveButtonPressed:(id)sender {
     AppDelegate *appDelegate = [[UIApplication sharedApplication]delegate];
     NSManagedObjectContext *managedObjectContext = appDelegate.managedObjectContext;
     
@@ -38,10 +49,11 @@
     if (newPerson != nil) {
         newPerson.firstName = self.textFieldFirstName.text;
         newPerson.lastName = self.textFieldLastName.text;
-        newPerson.age = @([self.textFieldAge.text integerValue]);
+        newPerson.age = [NSNumber numberWithInteger:[self.textFieldAge.text integerValue]];
         
         NSError *savingError = nil;
         if ([managedObjectContext save:&savingError]) {
+            NSLog(@"saving");
             [self.navigationController popViewControllerAnimated:YES];
         } else {
             NSLog(@"Failed to save the managed object context");
@@ -49,14 +61,11 @@
     } else {
         NSLog(@"Failed to create the new person object");
     }
-}
-- (IBAction)cancelButtonPressed:(id)sender {
-    [self.presentingViewController dismissViewControllerAnimated:YES completion:nil];
+
+    
 }
 
-- (IBAction)saveButtonPressed:(id)sender {
-    [self createNewPerson];
-}
+
 
 /*
 #pragma mark - Navigation
