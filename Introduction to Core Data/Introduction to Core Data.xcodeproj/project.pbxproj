@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		045C8B681980B1A500F96D47 /* PersonsListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 045C8B671980B1A500F96D47 /* PersonsListTableViewController.m */; };
 		045C8B6B1980B1DB00F96D47 /* AddPersonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 045C8B6A1980B1DB00F96D47 /* AddPersonViewController.m */; };
+		045DAAA41981D0D9008F073C /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 045DAAA31981D0D9008F073C /* Person.m */; };
+		045DAAA71981D0D9008F073C /* Manager.m in Sources */ = {isa = PBXBuildFile; fileRef = 045DAAA61981D0D9008F073C /* Manager.m */; };
 		04EDCBF5197F726F000D6AFD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EDCBF4197F726F000D6AFD /* main.m */; };
 		04EDCBF8197F726F000D6AFD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EDCBF7197F726F000D6AFD /* AppDelegate.m */; };
 		04EDCBFB197F726F000D6AFD /* Introduction_to_Core_Data.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 04EDCBF9197F726F000D6AFD /* Introduction_to_Core_Data.xcdatamodeld */; };
@@ -16,7 +18,6 @@
 		04EDCC01197F726F000D6AFD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04EDCBFF197F726F000D6AFD /* Main.storyboard */; };
 		04EDCC03197F726F000D6AFD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04EDCC02197F726F000D6AFD /* Images.xcassets */; };
 		04EDCC0F197F7270000D6AFD /* Introduction_to_Core_DataTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EDCC0E197F7270000D6AFD /* Introduction_to_Core_DataTests.m */; };
-		04EDCC1B197F74F1000D6AFD /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EDCC1A197F74F1000D6AFD /* Person.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +35,10 @@
 		045C8B671980B1A500F96D47 /* PersonsListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonsListTableViewController.m; sourceTree = "<group>"; };
 		045C8B691980B1DB00F96D47 /* AddPersonViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddPersonViewController.h; sourceTree = "<group>"; };
 		045C8B6A1980B1DB00F96D47 /* AddPersonViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddPersonViewController.m; sourceTree = "<group>"; };
+		045DAAA21981D0D9008F073C /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Person.h; path = ../Person.h; sourceTree = "<group>"; };
+		045DAAA31981D0D9008F073C /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Person.m; path = ../Person.m; sourceTree = "<group>"; };
+		045DAAA51981D0D9008F073C /* Manager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Manager.h; path = ../Manager.h; sourceTree = "<group>"; };
+		045DAAA61981D0D9008F073C /* Manager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Manager.m; path = ../Manager.m; sourceTree = "<group>"; };
 		04EDCBEF197F726F000D6AFD /* Introduction to Core Data.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Introduction to Core Data.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		04EDCBF3197F726F000D6AFD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		04EDCBF4197F726F000D6AFD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -48,8 +53,6 @@
 		04EDCC0D197F7270000D6AFD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		04EDCC0E197F7270000D6AFD /* Introduction_to_Core_DataTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Introduction_to_Core_DataTests.m; sourceTree = "<group>"; };
 		04EDCC18197F74F1000D6AFD /* Introduction to Core Data-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Introduction to Core Data-Bridging-Header.h"; sourceTree = "<group>"; };
-		04EDCC19197F74F1000D6AFD /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
-		04EDCC1A197F74F1000D6AFD /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,9 +104,11 @@
 				045C8B691980B1DB00F96D47 /* AddPersonViewController.h */,
 				045C8B6A1980B1DB00F96D47 /* AddPersonViewController.m */,
 				04EDCC02197F726F000D6AFD /* Images.xcassets */,
+				045DAAA51981D0D9008F073C /* Manager.h */,
+				045DAAA61981D0D9008F073C /* Manager.m */,
+				045DAAA21981D0D9008F073C /* Person.h */,
+				045DAAA31981D0D9008F073C /* Person.m */,
 				04EDCBF9197F726F000D6AFD /* Introduction_to_Core_Data.xcdatamodeld */,
-				04EDCC19197F74F1000D6AFD /* Person.h */,
-				04EDCC1A197F74F1000D6AFD /* Person.m */,
 				04EDCBF2197F726F000D6AFD /* Supporting Files */,
 				04EDCC18197F74F1000D6AFD /* Introduction to Core Data-Bridging-Header.h */,
 			);
@@ -237,11 +242,12 @@
 			files = (
 				045C8B6B1980B1DB00F96D47 /* AddPersonViewController.m in Sources */,
 				045C8B681980B1A500F96D47 /* PersonsListTableViewController.m in Sources */,
+				045DAAA41981D0D9008F073C /* Person.m in Sources */,
 				04EDCBF8197F726F000D6AFD /* AppDelegate.m in Sources */,
 				04EDCBFB197F726F000D6AFD /* Introduction_to_Core_Data.xcdatamodeld in Sources */,
-				04EDCC1B197F74F1000D6AFD /* Person.m in Sources */,
 				04EDCBFE197F726F000D6AFD /* ViewController.m in Sources */,
 				04EDCBF5197F726F000D6AFD /* main.m in Sources */,
+				045DAAA71981D0D9008F073C /* Manager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
