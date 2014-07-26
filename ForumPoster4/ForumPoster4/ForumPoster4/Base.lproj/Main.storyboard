@@ -13,7 +13,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="detailButton" indentationWidth="10" reuseIdentifier="topicListcell" textLabel="yfJ-X0-FXv" style="IBUITableViewCellStyleDefault" id="VU2-R4-ad8">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="detailButton" indentationWidth="10" reuseIdentifier="topicListCell" textLabel="yfJ-X0-FXv" style="IBUITableViewCellStyleDefault" id="VU2-R4-ad8">
                                 <rect key="frame" x="0.0" y="86" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="VU2-R4-ad8" id="nEJ-sf-5nc">
@@ -30,7 +30,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="C87-2u-Hew" kind="push" identifier="showTopicDetail" id="hdF-eg-0Jn"/>
+                                    <segue destination="C87-2u-Hew" kind="push" identifier="showTopicDetail" id="RZA-f3-P4f"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -42,7 +42,7 @@
                     <navigationItem key="navigationItem" title="帖子列表" id="DNG-at-732">
                         <barButtonItem key="rightBarButtonItem" title="发新帖" id="U47-p9-QLP">
                             <connections>
-                                <segue destination="mE3-pf-cPQ" kind="push" id="csP-ke-EpQ"/>
+                                <segue destination="Wu2-Me-Ay9" kind="push" id="GJ6-yo-01k"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -100,12 +100,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b3a-TL-agN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1378" y="-14"/>
+            <point key="canvasLocation" x="916" y="-8"/>
         </scene>
         <!--Topic Detail View Controller-->
         <scene sceneID="KVb-Xz-ega">
             <objects>
-                <viewController id="C87-2u-Hew" customClass="TopicDetailViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="topicDetail" useStoryboardIdentifierAsRestorationIdentifier="YES" id="C87-2u-Hew" customClass="TopicDetailViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="QmO-iU-ZQ7"/>
                         <viewControllerLayoutGuide type="bottom" id="DMU-4G-zQX"/>
@@ -120,10 +120,9 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QX4-E4-FR5">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="this a text view" translatesAutoresizingMaskIntoConstraints="NO" id="QX4-E4-FR5">
                                 <rect key="frame" x="26" y="147" width="240" height="128"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
@@ -161,26 +160,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jh8-QQ-mTR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-7" y="669"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="yCb-PC-vFa">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="mE3-pf-cPQ" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="zhl-9c-2Vo">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="Wu2-Me-Ay9" kind="relationship" relationship="rootViewController" id="M9H-NK-oO8"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="oZe-8t-6pv" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="905" y="-14"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

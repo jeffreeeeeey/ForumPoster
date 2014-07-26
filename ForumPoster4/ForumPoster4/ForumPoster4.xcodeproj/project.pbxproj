@@ -18,6 +18,7 @@
 		045DAAE01981DB53008F073C /* AddTopicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 045DAADF1981DB53008F073C /* AddTopicViewController.m */; };
 		0466DB351981E12000B23754 /* Topic.m in Sources */ = {isa = PBXBuildFile; fileRef = 0466DB341981E12000B23754 /* Topic.m */; };
 		0466DB381981E12100B23754 /* Images.m in Sources */ = {isa = PBXBuildFile; fileRef = 0466DB371981E12100B23754 /* Images.m */; };
+		04ED721E19833756000DEF00 /* TopicDetail2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04ED721D19833756000DEF00 /* TopicDetail2ViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,8 @@
 		0466DB341981E12000B23754 /* Topic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Topic.m; sourceTree = "<group>"; };
 		0466DB361981E12100B23754 /* Images.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Images.h; sourceTree = "<group>"; };
 		0466DB371981E12100B23754 /* Images.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Images.m; sourceTree = "<group>"; };
+		04ED721C19833756000DEF00 /* TopicDetail2ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TopicDetail2ViewController.h; sourceTree = "<group>"; };
+		04ED721D19833756000DEF00 /* TopicDetail2ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TopicDetail2ViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +144,8 @@
 				045DAADF1981DB53008F073C /* AddTopicViewController.m */,
 				045DAABE1981DA71008F073C /* TopicDetailViewController.h */,
 				045DAABF1981DA71008F073C /* TopicDetailViewController.m */,
+				04ED721C19833756000DEF00 /* TopicDetail2ViewController.h */,
+				04ED721D19833756000DEF00 /* TopicDetail2ViewController.m */,
 			);
 			name = VierControllers;
 			sourceTree = "<group>";
@@ -260,6 +265,7 @@
 				0466DB381981E12100B23754 /* Images.m in Sources */,
 				045DAABA1981DA71008F073C /* AppDelegate.m in Sources */,
 				045DAAE01981DB53008F073C /* AddTopicViewController.m in Sources */,
+				04ED721E19833756000DEF00 /* TopicDetail2ViewController.m in Sources */,
 				045DAAC01981DA71008F073C /* TopicDetailViewController.m in Sources */,
 				045DAAB71981DA71008F073C /* main.m in Sources */,
 				0466DB351981E12000B23754 /* Topic.m in Sources */,

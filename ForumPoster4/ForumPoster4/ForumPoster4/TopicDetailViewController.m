@@ -33,15 +33,15 @@
     // Do any additional setup after loading the view, typically from a nib.
     self.navigationItem.title = @"帖子详情";
     
-    self.labelTitle.text = self.topic.title;
-    self.textViewContent.text = self.topic.content;
+    CGRect labelRect = CGRectMake(30.0, 30.0, 100.0, 50.0);
+    UILabel *alabel = [[UILabel alloc]initWithFrame:labelRect];
+    alabel.text = @"a label";
+    alabel.textColor = [UIColor blackColor];
+    [self.view addSubview:alabel];
     
 }
 
-- (void)setTopic:(Topic *)topic
-{
-    self.topic = topic;
-}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

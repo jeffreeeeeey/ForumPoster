@@ -10,6 +10,7 @@
 #import "AppDelegate.h"
 #import "AddTopicViewController.h"
 #import "TopicDetailViewController.h"
+#import "TopicDetail2ViewController.h"
 #import "Topic.h"
 #import "Images.h"
 
@@ -30,7 +31,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"topicListCell"];
+    //[self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"topicListCell"];
     
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc]initWithEntityName:@"Topic"];
     
@@ -94,6 +95,7 @@
 
     // Return the number of rows in the section.
     id <NSFetchedResultsSectionInfo> sectionInfo = self.frc.sections[section];
+    //NSLog(@"rows:%d",sectionInfo.numberOfObjects);
     return sectionInfo.numberOfObjects;
 }
 
@@ -109,16 +111,37 @@
     
     return cell;
 }
+
+#pragma mark - Navigation
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    // Get the new view controller using [segue destinationViewController].
+    // Pass the selected object to the new view controller.
+    if ([segue.identifier isEqualToString:@"showTopicDetail"]) {
+        NSLog(@"showTopicDetail");
+        
+        NSIndexPath *indexPath = [self.tableView indexPathForCell:sender];
+        Topic *topic = [self.frc objectAtIndexPath:indexPath];
+        
+        [[segue destinationViewController] setTopic:topic];
+        
+    }
+    
+}
+
+
+
 /*
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     TopicDetailViewController *vc = [[TopicDetailViewController alloc]init];
+    vc.view.backgroundColor = [UIColor whiteColor];
     //Topic *topic = [self.frc objectAtIndexPath:indexPath];
     //vc.topic = topic;
     
     [self.navigationController pushViewController:vc animated:YES];
 }
-*/
+
 
 
 /*
@@ -157,22 +180,6 @@
 
 
 
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-    if ([segue.identifier isEqualToString:@"showTopicDetail"]) {
-        NSLog(@"showTopicDetail");
-        
-        NSIndexPath *indexPath = [self.tableView indexPathForCell:sender];
-        Topic *topic = [self.frc objectAtIndexPath:indexPath];
-        
-        [[segue destinationViewController] setTopic:topic];
-        [self.navigationController performSegueWithIdentifier:@"showTopicDetail" sender:self];
-    }
-    
-}
 
 @end
