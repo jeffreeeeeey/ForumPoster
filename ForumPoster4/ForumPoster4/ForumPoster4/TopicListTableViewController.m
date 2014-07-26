@@ -16,6 +16,7 @@
 
 @interface TopicListTableViewController ()<NSFetchedResultsControllerDelegate>
 
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *addTopicBarButton;
 @property (nonatomic, strong)NSFetchedResultsController *frc;
 
 @end
@@ -49,13 +50,20 @@
         NSLog(@"Failed to fetch");
     }
     
-    self.tableView.editing = NO;
+    
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
+
+- (IBAction)addTopic:(id)sender {
+    AddTopicViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"addTopic"];
+    UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:vc];
+    [self.navigationController presentViewController:nav animated:YES completion:nil];
+}
+
 
 #pragma mark - Handle fetchedResults
 
@@ -107,7 +115,7 @@
     
     Topic *topic = [self.frc objectAtIndexPath:indexPath];
     cell.textLabel.text = topic.title;
-    cell.accessoryType = UITableViewCellAccessoryDetailButton;
+    
     
     return cell;
 }
@@ -118,7 +126,7 @@
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
     if ([segue.identifier isEqualToString:@"showTopicDetail"]) {
-        NSLog(@"showTopicDetail");
+        //NSLog(@"showTopicDetail");
         
         NSIndexPath *indexPath = [self.tableView indexPathForCell:sender];
         Topic *topic = [self.frc objectAtIndexPath:indexPath];

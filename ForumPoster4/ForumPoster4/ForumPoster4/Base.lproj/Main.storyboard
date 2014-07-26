@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="9Nc-Xz-i9x">
     <dependencies>
+        <deployment defaultVersion="1792" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
@@ -13,15 +14,15 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="detailButton" indentationWidth="10" reuseIdentifier="topicListCell" textLabel="yfJ-X0-FXv" style="IBUITableViewCellStyleDefault" id="VU2-R4-ad8">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="topicListCell" textLabel="yfJ-X0-FXv" style="IBUITableViewCellStyleDefault" id="VU2-R4-ad8">
                                 <rect key="frame" x="0.0" y="86" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="VU2-R4-ad8" id="nEJ-sf-5nc">
-                                    <rect key="frame" x="0.0" y="0.0" width="273" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="yfJ-X0-FXv">
-                                            <rect key="frame" x="15" y="0.0" width="258" height="43"/>
+                                            <rect key="frame" x="15" y="0.0" width="270" height="43"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -42,26 +43,29 @@
                     <navigationItem key="navigationItem" title="帖子列表" id="DNG-at-732">
                         <barButtonItem key="rightBarButtonItem" title="发新帖" id="U47-p9-QLP">
                             <connections>
-                                <segue destination="Wu2-Me-Ay9" kind="push" id="GJ6-yo-01k"/>
+                                <action selector="addTopic:" destination="1qb-OB-ugR" id="1qq-xZ-0BV"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="addTopicBarButton" destination="U47-p9-QLP" id="8E9-lo-Hqy"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yBe-2w-pwI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="453" y="669"/>
         </scene>
-        <!--Add Topic View Controller - 发表帖子-->
+        <!--Add Topic View Controller-->
         <scene sceneID="Do5-Ab-bCf">
             <objects>
-                <viewController id="Wu2-Me-Ay9" customClass="AddTopicViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="addTopic" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Wu2-Me-Ay9" customClass="AddTopicViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Kpd-JD-8ak"/>
                         <viewControllerLayoutGuide type="bottom" id="Jjb-eS-SHW"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="K75-ED-Yd4">
+                    <view key="view" contentMode="scaleToFill" id="K75-ED-Yd4" customClass="UIControl">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -76,26 +80,28 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <toolbar appearanceType="aqua" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hWm-1C-CRb">
+                                <rect key="frame" x="0.0" y="524" width="320" height="44"/>
+                                <items>
+                                    <barButtonItem systemItem="camera" id="YeH-Rm-Nd7">
+                                        <connections>
+                                            <action selector="takePicture:" destination="Wu2-Me-Ay9" id="LDF-sq-7hs"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <connections>
+                            <action selector="endEditing:" destination="Wu2-Me-Ay9" eventType="touchUpInside" id="wVd-zh-obb"/>
+                        </connections>
                     </view>
-                    <navigationItem key="navigationItem" title="发表帖子" id="tVs-bo-f3a">
-                        <barButtonItem key="leftBarButtonItem" title="取消" id="HM8-Y4-kal">
-                            <connections>
-                                <action selector="cancelButtonPressed:" destination="Wu2-Me-Ay9" id="Jji-an-sXO"/>
-                            </connections>
-                        </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="发布" id="Y1h-dG-T9v">
-                            <connections>
-                                <action selector="saveButtonPressed:" destination="Wu2-Me-Ay9" id="ZnF-4K-zEn"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="cb5-Ol-FAs"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
-                        <outlet property="textFieldTitle" destination="Tvw-0G-jYb" id="NPv-cW-nqW"/>
-                        <outlet property="textViewContent" destination="xbZ-k8-Crw" id="c2Y-hK-wJk"/>
+                        <outlet property="textFieldTitle" destination="Tvw-0G-jYb" id="l5C-7s-ce1"/>
+                        <outlet property="textViewContent" destination="xbZ-k8-Crw" id="Rhg-OH-iBe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b3a-TL-agN" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -114,16 +120,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hzy-jT-v5L">
-                                <rect key="frame" x="43" y="73" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="274" translatesAutoresizingMaskIntoConstraints="NO" id="hzy-jT-v5L">
+                                <rect key="frame" x="26" y="74" width="274" height="65"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="this a text view" translatesAutoresizingMaskIntoConstraints="NO" id="QX4-E4-FR5">
-                                <rect key="frame" x="26" y="147" width="240" height="128"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="this a text view" translatesAutoresizingMaskIntoConstraints="NO" id="QX4-E4-FR5">
+                                <rect key="frame" x="26" y="147" width="274" height="401"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
