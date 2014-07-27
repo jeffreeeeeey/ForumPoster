@@ -2,7 +2,7 @@
 //  Images.m
 //  ForumPoster4
 //
-//  Created by mac on 7/25/14.
+//  Created by mac on 7/27/14.
 //  Copyright (c) 2014 mac. All rights reserved.
 //
 
@@ -12,7 +12,10 @@
 
 @implementation Images
 
+@dynamic image;
 @dynamic path;
+@dynamic label;
+@dynamic summary;
 @dynamic topic;
 
 @end

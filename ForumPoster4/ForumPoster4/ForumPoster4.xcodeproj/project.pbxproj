@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04589B571984A291003CD72E /* FPImageTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 04589B561984A291003CD72E /* FPImageTransformer.m */; };
+		04589B5D1984A579003CD72E /* Images.m in Sources */ = {isa = PBXBuildFile; fileRef = 04589B5C1984A579003CD72E /* Images.m */; };
+		04589B601984B00D003CD72E /* 01.png in Resources */ = {isa = PBXBuildFile; fileRef = 04589B5F1984B00D003CD72E /* 01.png */; };
+		04589B621984B014003CD72E /* 02.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 04589B611984B014003CD72E /* 02.jpg */; };
+		04589B651984B49B003CD72E /* Topic.m in Sources */ = {isa = PBXBuildFile; fileRef = 04589B641984B49B003CD72E /* Topic.m */; };
 		045DAAB71981DA71008F073C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 045DAAB61981DA71008F073C /* main.m */; };
 		045DAABA1981DA71008F073C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 045DAAB91981DA71008F073C /* AppDelegate.m */; };
 		045DAABD1981DA71008F073C /* ForumPoster4.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 045DAABB1981DA71008F073C /* ForumPoster4.xcdatamodeld */; };
@@ -16,8 +21,6 @@
 		045DAAD11981DA71008F073C /* ForumPoster4Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 045DAAD01981DA71008F073C /* ForumPoster4Tests.m */; };
 		045DAADC1981DB2D008F073C /* TopicListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 045DAADB1981DB2D008F073C /* TopicListTableViewController.m */; };
 		045DAAE01981DB53008F073C /* AddTopicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 045DAADF1981DB53008F073C /* AddTopicViewController.m */; };
-		0466DB351981E12000B23754 /* Topic.m in Sources */ = {isa = PBXBuildFile; fileRef = 0466DB341981E12000B23754 /* Topic.m */; };
-		0466DB381981E12100B23754 /* Images.m in Sources */ = {isa = PBXBuildFile; fileRef = 0466DB371981E12100B23754 /* Images.m */; };
 		04ED721E19833756000DEF00 /* TopicDetail2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04ED721D19833756000DEF00 /* TopicDetail2ViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -32,6 +35,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		04589B551984A291003CD72E /* FPImageTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FPImageTransformer.h; sourceTree = "<group>"; };
+		04589B561984A291003CD72E /* FPImageTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FPImageTransformer.m; sourceTree = "<group>"; };
+		04589B5B1984A579003CD72E /* Images.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Images.h; sourceTree = "<group>"; };
+		04589B5C1984A579003CD72E /* Images.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Images.m; sourceTree = "<group>"; };
+		04589B5F1984B00D003CD72E /* 01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 01.png; sourceTree = "<group>"; };
+		04589B611984B014003CD72E /* 02.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 02.jpg; sourceTree = "<group>"; };
+		04589B631984B49B003CD72E /* Topic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Topic.h; sourceTree = "<group>"; };
+		04589B641984B49B003CD72E /* Topic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Topic.m; sourceTree = "<group>"; };
 		045DAAB11981DA71008F073C /* ForumPoster4.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ForumPoster4.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		045DAAB51981DA71008F073C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		045DAAB61981DA71008F073C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -50,10 +61,6 @@
 		045DAADE1981DB53008F073C /* AddTopicViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddTopicViewController.h; sourceTree = "<group>"; };
 		045DAADF1981DB53008F073C /* AddTopicViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddTopicViewController.m; sourceTree = "<group>"; };
 		0466DB321981E11F00B23754 /* ForumPoster4-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ForumPoster4-Bridging-Header.h"; sourceTree = "<group>"; };
-		0466DB331981E12000B23754 /* Topic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Topic.h; sourceTree = "<group>"; };
-		0466DB341981E12000B23754 /* Topic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Topic.m; sourceTree = "<group>"; };
-		0466DB361981E12100B23754 /* Images.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Images.h; sourceTree = "<group>"; };
-		0466DB371981E12100B23754 /* Images.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Images.m; sourceTree = "<group>"; };
 		04ED721C19833756000DEF00 /* TopicDetail2ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TopicDetail2ViewController.h; sourceTree = "<group>"; };
 		04ED721D19833756000DEF00 /* TopicDetail2ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TopicDetail2ViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -76,6 +83,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		04589B5E1984AFFD003CD72E /* Pics */ = {
+			isa = PBXGroup;
+			children = (
+				04589B5F1984B00D003CD72E /* 01.png */,
+				04589B611984B014003CD72E /* 02.jpg */,
+			);
+			name = Pics;
+			sourceTree = "<group>";
+		};
 		045DAAA81981DA71008F073C = {
 			isa = PBXGroup;
 			children = (
@@ -112,6 +128,7 @@
 		045DAAB41981DA71008F073C /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				04589B5E1984AFFD003CD72E /* Pics */,
 				045DAAB51981DA71008F073C /* Info.plist */,
 				045DAAB61981DA71008F073C /* main.m */,
 			);
@@ -153,11 +170,13 @@
 		0466DB391981E12B00B23754 /* CustomClasses */ = {
 			isa = PBXGroup;
 			children = (
+				04589B631984B49B003CD72E /* Topic.h */,
+				04589B641984B49B003CD72E /* Topic.m */,
+				04589B5B1984A579003CD72E /* Images.h */,
+				04589B5C1984A579003CD72E /* Images.m */,
+				04589B551984A291003CD72E /* FPImageTransformer.h */,
+				04589B561984A291003CD72E /* FPImageTransformer.m */,
 				045DAABB1981DA71008F073C /* ForumPoster4.xcdatamodeld */,
-				0466DB361981E12100B23754 /* Images.h */,
-				0466DB371981E12100B23754 /* Images.m */,
-				0466DB331981E12000B23754 /* Topic.h */,
-				0466DB341981E12000B23754 /* Topic.m */,
 			);
 			name = CustomClasses;
 			sourceTree = "<group>";
@@ -242,8 +261,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04589B621984B014003CD72E /* 02.jpg in Resources */,
 				045DAAC31981DA71008F073C /* Main.storyboard in Resources */,
 				045DAAC51981DA71008F073C /* Images.xcassets in Resources */,
+				04589B601984B00D003CD72E /* 01.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,14 +283,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				045DAABD1981DA71008F073C /* ForumPoster4.xcdatamodeld in Sources */,
-				0466DB381981E12100B23754 /* Images.m in Sources */,
 				045DAABA1981DA71008F073C /* AppDelegate.m in Sources */,
 				045DAAE01981DB53008F073C /* AddTopicViewController.m in Sources */,
+				04589B651984B49B003CD72E /* Topic.m in Sources */,
 				04ED721E19833756000DEF00 /* TopicDetail2ViewController.m in Sources */,
 				045DAAC01981DA71008F073C /* TopicDetailViewController.m in Sources */,
 				045DAAB71981DA71008F073C /* main.m in Sources */,
-				0466DB351981E12000B23754 /* Topic.m in Sources */,
+				04589B5D1984A579003CD72E /* Images.m in Sources */,
 				045DAADC1981DB2D008F073C /* TopicListTableViewController.m in Sources */,
+				04589B571984A291003CD72E /* FPImageTransformer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

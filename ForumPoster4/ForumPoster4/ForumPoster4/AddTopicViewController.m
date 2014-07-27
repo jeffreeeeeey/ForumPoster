@@ -96,7 +96,7 @@
     if (topic != nil) {
         topic.title = self.textFieldTitle.text;
         topic.content = self.textViewContent.text;
-        
+        /*
         NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
         NSString *documentsPath = [paths firstObject];
         
@@ -106,7 +106,19 @@
             NSData *data = UIImagePNGRepresentation(image);
             [data writeToFile:imagePath atomically:YES];
         }
-        topic.images
+        */
+        
+        
+        if (self.imagesArray.count > 0) {
+            for (int i = 0; i < self.imagesArray.count; i++) {
+                UIImageView *imageView = [self.imagesArray objectAtIndex:i];
+                UIImage *image = imageView.image;
+                Images *newImage = [NSEntityDescription insertNewObjectForEntityForName:@"Images" inManagedObjectContext:managedObjectContext];
+                newImage.image = image;
+                newImage.topic = topic;
+            }
+        }
+        
         
         NSError *savingError = nil;
         if ([managedObjectContext save:&savingError]) {
@@ -179,8 +191,18 @@
         
         [self presentViewController:imagePicker animated:YES completion:nil];
     }
+    
+    
 }
-
+/*
+- (IBAction)setTheOneImage:(id)sender {
+    self.theOneImage = [[UIImageView alloc]initWithImage:[UIImage imageWithContentsOfFile:@"01.png"]];
+    //[self.view addSubview:self.theOneImage];
+    NSLog(@"set the one image");
+    
+}
+*/
+ 
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
 {
     if ([info objectForKey:UIImagePickerControllerOriginalImage]) {

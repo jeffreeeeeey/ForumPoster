@@ -33,7 +33,7 @@
     [super viewDidLoad];
     
     //[self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"topicListCell"];
-    
+    // Load all Topics here
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc]initWithEntityName:@"Topic"];
     
     
