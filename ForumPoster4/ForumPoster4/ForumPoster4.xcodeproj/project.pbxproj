@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0454E61A198722250090E1EF /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0454E619198722250090E1EF /* LoginViewController.m */; };
 		04589B571984A291003CD72E /* FPImageTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 04589B561984A291003CD72E /* FPImageTransformer.m */; };
 		04589B5D1984A579003CD72E /* Images.m in Sources */ = {isa = PBXBuildFile; fileRef = 04589B5C1984A579003CD72E /* Images.m */; };
 		04589B601984B00D003CD72E /* 01.png in Resources */ = {isa = PBXBuildFile; fileRef = 04589B5F1984B00D003CD72E /* 01.png */; };
@@ -35,6 +36,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0454E618198722250090E1EF /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		0454E619198722250090E1EF /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		04589B551984A291003CD72E /* FPImageTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FPImageTransformer.h; sourceTree = "<group>"; };
 		04589B561984A291003CD72E /* FPImageTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FPImageTransformer.m; sourceTree = "<group>"; };
 		04589B5B1984A579003CD72E /* Images.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Images.h; sourceTree = "<group>"; };
@@ -163,6 +166,8 @@
 				045DAABF1981DA71008F073C /* TopicDetailViewController.m */,
 				04ED721C19833756000DEF00 /* TopicDetail2ViewController.h */,
 				04ED721D19833756000DEF00 /* TopicDetail2ViewController.m */,
+				0454E618198722250090E1EF /* LoginViewController.h */,
+				0454E619198722250090E1EF /* LoginViewController.m */,
 			);
 			name = VierControllers;
 			sourceTree = "<group>";
@@ -291,6 +296,7 @@
 				045DAAB71981DA71008F073C /* main.m in Sources */,
 				04589B5D1984A579003CD72E /* Images.m in Sources */,
 				045DAADC1981DB2D008F073C /* TopicListTableViewController.m in Sources */,
+				0454E61A198722250090E1EF /* LoginViewController.m in Sources */,
 				04589B571984A291003CD72E /* FPImageTransformer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

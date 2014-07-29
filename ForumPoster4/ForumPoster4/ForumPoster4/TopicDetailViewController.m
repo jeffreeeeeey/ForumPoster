@@ -109,7 +109,7 @@
         [self.scrollViewContent addSubview:_imagesScrollView];
     }
     
-    NSLog(@"content height:%f\n", textViewContent.frame.size.height);
+    //NSLog(@"content height:%f\n", textViewContent.frame.size.height);
 }
 
 

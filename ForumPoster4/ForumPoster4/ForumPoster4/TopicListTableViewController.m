@@ -13,6 +13,7 @@
 #import "TopicDetail2ViewController.h"
 #import "Topic.h"
 #import "Images.h"
+#import "LoginViewController.h"
 
 @interface TopicListTableViewController ()<NSFetchedResultsControllerDelegate>
 
@@ -135,6 +136,14 @@
         
     }
     
+}
+
+#pragma mark - Login
+
+- (IBAction)loginButtonPressed:(id)sender {
+    LoginViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"login"];
+    UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:vc];
+    [self.navigationController presentViewController:nav animated:YES completion:nil];
 }
 
 

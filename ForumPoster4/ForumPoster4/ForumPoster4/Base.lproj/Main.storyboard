@@ -41,6 +41,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="帖子列表" id="DNG-at-732">
+                        <barButtonItem key="leftBarButtonItem" title="登录" id="Nnb-pK-XjB">
+                            <connections>
+                                <action selector="loginButtonPressed:" destination="1qb-OB-ugR" id="RlO-ie-E2m"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="发新帖" id="U47-p9-QLP">
                             <connections>
                                 <action selector="addTopic:" destination="1qb-OB-ugR" id="1qq-xZ-0BV"/>
@@ -59,6 +64,54 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yBe-2w-pwI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="453" y="669"/>
+        </scene>
+        <!--Login View Controller-->
+        <scene sceneID="oRz-jB-6FZ">
+            <objects>
+                <viewController storyboardIdentifier="login" useStoryboardIdentifierAsRestorationIdentifier="YES" id="i9W-Qe-fIL" customClass="LoginViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="uji-7L-BdE"/>
+                        <viewControllerLayoutGuide type="bottom" id="Et9-aT-Mq0"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="u3B-JK-DXH">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="用户名/邮箱" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="d9V-QR-MYx">
+                                <rect key="frame" x="20" y="106" width="280" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="密码" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bz4-uL-VbY">
+                                <rect key="frame" x="20" y="161" width="280" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rBa-Hv-Tq7">
+                                <rect key="frame" x="121" y="245" width="78" height="30"/>
+                                <state key="normal" title="登录">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="loginButtonPressed:" destination="i9W-Qe-fIL" eventType="touchUpInside" id="1uq-Ck-U5G"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4">
+                        <size key="portraitSize" width="320" height="568"/>
+                        <size key="landscapeSize" width="568" height="320"/>
+                    </simulatedScreenMetrics>
+                    <connections>
+                        <outlet property="textFieldPassWord" destination="bz4-uL-VbY" id="DcB-Kz-Nyy"/>
+                        <outlet property="textFieldUserName" destination="d9V-QR-MYx" id="6aF-cm-iAB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4VS-vN-tTr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="453" y="1333"/>
         </scene>
         <!--Add Topic View Controller-->
         <scene sceneID="Do5-Ab-bCf">
